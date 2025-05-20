@@ -1,0 +1,67 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="1" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1a5804fe-1a6b-434c-bf52-7568f8f70d2f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MYSQL"/>
+	<query language="SQL"><![CDATA[SELECT * FROM logintable]]></query>
+	<field name="ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="logintable"/>
+	</field>
+	<field name="FullName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="FullName"/>
+		<property name="com.jaspersoft.studio.field.label" value="FullName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="logintable"/>
+	</field>
+	<field name="Type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Type"/>
+		<property name="com.jaspersoft.studio.field.label" value="Type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="logintable"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="160" splitType="Stretch">
+		<element kind="rectangle" uuid="1e1ff72c-2010-4252-9c83-3f33ce539847" x="0" y="1" width="560" height="149"/>
+		<element kind="staticText" uuid="beded038-4023-49f6-ae1a-ff17183e5917" x="50" y="30" width="470" height="50" fontName="Gill Sans Ultra Bold" fontSize="30.0" hTextAlign="Center">
+			<text><![CDATA[PERERA STATIONARIES]]></text>
+		</element>
+		<element kind="staticText" uuid="89601097-ad83-4bbe-ad81-cdaf0e06226f" x="0" y="90" width="550" height="30" fontSize="18.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Employee Details Report for PERERA STATIONARIES]]></text>
+		</element>
+		<element kind="textField" uuid="35302d3d-c7fe-4362-bd9d-795e58ce5697" x="410" y="120" width="100" height="30" fontSize="12.0" pattern="MMMMM dd, yyyy" bold="true">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="85ff85ce-d5c7-4007-a70b-f47965b475e7" x="20" y="20" width="100" height="30" fontSize="18.0" bold="true">
+			<text><![CDATA[Employee ID]]></text>
+		</element>
+		<element kind="staticText" uuid="3e319bd0-6421-430b-8c97-d2e374c4b93e" x="180" y="20" width="140" height="30" fontSize="18.0" bold="true">
+			<text><![CDATA[Employee Name ]]></text>
+		</element>
+		<element kind="staticText" uuid="57d027e3-8ac4-4cc0-918c-3a87de218067" x="370" y="20" width="140" height="30" fontSize="18.0" bold="true">
+			<text><![CDATA[Employee TYPE]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<element kind="line" uuid="9f943144-6994-4d98-8564-9cbeb1558657" x="10" y="0" width="550" height="1"/>
+			<element kind="textField" uuid="a3559b37-8734-441b-a326-4e1853cd6fe6" x="20" y="10" width="100" height="30" fontSize="16.0" bold="true">
+				<expression><![CDATA[$F{ID}]]></expression>
+			</element>
+			<element kind="textField" uuid="874802cb-398e-430d-bf00-07e78896e3d7" x="190" y="10" width="130" height="30" fontSize="16.0" bold="true">
+				<expression><![CDATA[$F{FullName}]]></expression>
+			</element>
+			<element kind="textField" uuid="8f3d620f-2262-4008-b2af-6e4c87108caf" x="380" y="10" width="100" height="30" fontSize="16.0" bold="true">
+				<expression><![CDATA[$F{Type}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter splitType="Stretch"/>
+	<pageFooter height="67" splitType="Stretch">
+		<element kind="staticText" uuid="273e3526-970e-4d01-8f1d-6e1623b91b25" x="200" y="20" width="163" height="47" hTextAlign="Center">
+			<text><![CDATA[NO.71,Ja-Ela                        pereraBookshop@gmail.com 0112239121 ]]></text>
+		</element>
+	</pageFooter>
+	<summary height="2" splitType="Stretch"/>
+</jasperReport>

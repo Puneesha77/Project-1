@@ -1,0 +1,78 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="3" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4da1533c-7fbb-434c-bf66-903765d9c8e2">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MYSQL"/>
+	<query language="SQL"><![CDATA[SELECT * FROM producttable]]></query>
+	<field name="ProductID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ProductID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ProductID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producttable"/>
+	</field>
+	<field name="ProductName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ProductName"/>
+		<property name="com.jaspersoft.studio.field.label" value="ProductName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producttable"/>
+	</field>
+	<field name="Price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="Price"/>
+		<property name="com.jaspersoft.studio.field.label" value="Price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producttable"/>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producttable"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="153" splitType="Stretch">
+		<element kind="rectangle" uuid="4a04d3c8-c87d-4a85-859f-ec317cf41d7a" x="0" y="1" width="552" height="149"/>
+		<element kind="staticText" uuid="47fd9618-1154-4e18-b14a-91a7e288aba9" x="50" y="30" width="470" height="50" fontName="Gill Sans Ultra Bold" fontSize="30.0" hTextAlign="Center">
+			<text><![CDATA[PERERA STATIONARIES]]></text>
+		</element>
+		<element kind="staticText" uuid="19fac9dd-1365-408f-b15d-832299556fab" x="2" y="80" width="550" height="30" fontSize="18.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Product Details Report of PERERA STATIONARIES]]></text>
+		</element>
+		<element kind="textField" uuid="120317ff-1d19-4c47-885a-7c32e6382cc7" x="420" y="120" width="100" height="30" fontSize="14.0" pattern="MMMMM dd, yyyy" bold="true">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</title>
+	<pageHeader height="7" splitType="Stretch"/>
+	<columnHeader height="75" splitType="Stretch">
+		<element kind="staticText" uuid="87c17fe4-2ef0-4e72-afd2-4f984807e775" x="20" y="32" width="100" height="30" fontSize="16.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Product ID]]></text>
+		</element>
+		<element kind="staticText" uuid="249b477f-25fb-42c0-b944-6d332aa6e91e" x="160" y="32" width="130" height="30" fontSize="16.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Product Name]]></text>
+		</element>
+		<element kind="staticText" uuid="eb39ae8a-0f6c-4861-a427-c2fb7f674930" x="320" y="32" width="100" height="30" fontSize="16.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Discription]]></text>
+		</element>
+		<element kind="staticText" uuid="81255522-b79f-4ff1-9d30-85bdf37bafdd" x="450" y="32" width="70" height="30" fontSize="16.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Price]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<element kind="line" uuid="be4222b4-d940-4465-8dad-2540c150d8c1" x="1" y="0" width="550" height="1"/>
+			<element kind="textField" uuid="ea0a4999-c4a9-4d5a-950e-ce557fa28586" x="20" y="10" width="100" height="30" fontSize="16.0" bold="true" hTextAlign="Center">
+				<expression><![CDATA[$F{ProductID}]]></expression>
+			</element>
+			<element kind="textField" uuid="a0801e62-6f3c-404e-883e-9eb1a7d2492b" x="180" y="10" width="100" height="30" fontSize="16.0" bold="true" hTextAlign="Center">
+				<expression><![CDATA[$F{ProductName}]]></expression>
+			</element>
+			<element kind="textField" uuid="87858a46-f2b3-48df-a72a-28ed61f14a2a" x="320" y="10" width="100" height="30" fontSize="16.0" bold="true">
+				<expression><![CDATA[$F{Description}]]></expression>
+			</element>
+			<element kind="textField" uuid="31dc4de5-e25c-4485-b14e-0b35d2255b33" x="440" y="10" width="100" height="30" fontSize="16.0" bold="true">
+				<expression><![CDATA[$F{Price}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="2" splitType="Stretch"/>
+	<pageFooter height="57" splitType="Stretch">
+		<element kind="staticText" uuid="af0fec4a-fe03-4677-a4e3-7ce69065f468" x="190" y="10" width="163" height="47" hTextAlign="Center">
+			<text><![CDATA[NO.71,Ja-Ela                        pereraBookshop@gmail.com 0112239121 ]]></text>
+		</element>
+	</pageFooter>
+	<summary height="3" splitType="Stretch"/>
+</jasperReport>

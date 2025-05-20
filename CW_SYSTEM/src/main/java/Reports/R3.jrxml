@@ -1,0 +1,67 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="2" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4b865eff-1086-43f1-a4a8-40d97c4a5608">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MYSQL"/>
+	<query language="SQL"><![CDATA[SELECT * FROM customertable]]></query>
+	<field name="CID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="CID"/>
+		<property name="com.jaspersoft.studio.field.label" value="CID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customertable"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customertable"/>
+	</field>
+	<field name="Phone" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Phone"/>
+		<property name="com.jaspersoft.studio.field.label" value="Phone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customertable"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="156" splitType="Stretch">
+		<element kind="rectangle" uuid="92ae255a-bef4-4a3e-b881-b5779a00d7bd" x="0" y="1" width="560" height="149"/>
+		<element kind="staticText" uuid="0f472d96-7074-4abb-be8d-67fbe9465111" x="50" y="30" width="470" height="50" fontName="Gill Sans Ultra Bold" fontSize="30.0" hTextAlign="Center">
+			<text><![CDATA[PERERA STATIONARIES]]></text>
+		</element>
+		<element kind="staticText" uuid="d9455a28-d661-4831-889e-6a40a5f45f0d" x="0" y="90" width="550" height="30" fontSize="18.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Customer Details Report of PERERA STATIONARIES]]></text>
+		</element>
+		<element kind="textField" uuid="45a69543-6235-4ddc-8c20-5db9c78711ad" x="370" y="126" width="150" height="30" fontSize="14.0" pattern="MMMMM dd, yyyy" bold="true">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</title>
+	<pageHeader height="5" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="f029f7c8-7a11-4e8e-ad82-f6f69a741745" x="40" y="20" width="100" height="30" fontSize="16.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[CustomerID]]></text>
+		</element>
+		<element kind="staticText" uuid="d93cd288-9443-4895-90f5-d8982f8fb0b6" x="170" y="20" width="160" height="30" fontSize="16.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Customer Name]]></text>
+		</element>
+		<element kind="staticText" uuid="85cbf057-5636-4d32-a7a8-ed6d3b0d62aa" x="360" y="20" width="180" height="30" fontSize="16.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Phone number]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<element kind="line" uuid="14ae5846-a0a0-4940-9c02-9f327bdfc4d7" x="0" y="-1" width="550" height="1"/>
+			<element kind="textField" uuid="2740d613-c7e5-490d-ae95-ca10b5fbbf6e" x="40" y="10" width="100" height="30" fontSize="16.0" bold="true">
+				<expression><![CDATA[$F{CID}]]></expression>
+			</element>
+			<element kind="textField" uuid="ef608f86-2010-4efc-86f7-55918e615caf" x="200" y="10" width="100" height="30" fontSize="16.0" bold="true">
+				<expression><![CDATA[$F{Name}]]></expression>
+			</element>
+			<element kind="textField" uuid="5bc05aa6-3a21-4706-a276-cd350540cec0" x="390" y="10" width="100" height="30" fontSize="16.0" bold="true">
+				<expression><![CDATA[$F{Phone}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter splitType="Stretch"/>
+	<pageFooter height="67" splitType="Stretch">
+		<element kind="staticText" uuid="663100db-72fb-4943-8094-a459901a1810" x="190" y="10" width="163" height="47" hTextAlign="Center">
+			<text><![CDATA[NO.71,Ja-Ela                        pereraBookshop@gmail.com 0112239121 ]]></text>
+		</element>
+	</pageFooter>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

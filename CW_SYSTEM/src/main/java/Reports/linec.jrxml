@@ -1,0 +1,52 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="c" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="de39c20a-69fe-456d-8c1a-d7f594cf67ba">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MYSQL"/>
+	<query language="SQL"><![CDATA[SELECT * FROM producttable]]></query>
+	<field name="ProductName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ProductName"/>
+		<property name="com.jaspersoft.studio.field.label" value="ProductName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producttable"/>
+	</field>
+	<field name="Quantity" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Quantity"/>
+		<property name="com.jaspersoft.studio.field.label" value="Quantity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producttable"/>
+	</field>
+	<field name="ProductID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ProductID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ProductID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producttable"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="83" splitType="Stretch">
+		<element kind="staticText" uuid="f5b003b7-e30a-478b-b182-801d7afd3f8b" x="0" y="0" width="520" height="50" fontName="Bahnschrift" fontSize="37.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Product Quantity]]></text>
+		</element>
+		<element kind="textField" uuid="ea5083fe-9287-492e-892c-4b9911195124" x="210" y="50" width="100" height="30" pattern="MMMMM dd, yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<detail>
+		<band height="354" splitType="Stretch">
+			<element kind="frame" uuid="70ae9101-1ec0-444d-b39d-3388be31a276" x="18" y="0" width="512" height="330">
+				<element kind="chart" chartType="bar" uuid="e40ffb00-d6f9-4ab2-b786-89a49fdca907" x="11" y="14" width="430" height="306" evaluationTime="Report">
+					<dataset kind="category">
+						<series>
+							<seriesExpression><![CDATA[$F{ProductName}]]></seriesExpression>
+							<categoryExpression><![CDATA[$F{ProductName}]]></categoryExpression>
+							<valueExpression><![CDATA[$F{Quantity}]]></valueExpression>
+						</series>
+					</dataset>
+					<plot categoryAxisLabelColor="#000000" categoryAxisTickLabelColor="#000000" categoryAxisLineColor="#000000" valueAxisLabelColor="#000000" valueAxisTickLabelColor="#000000" valueAxisLineColor="#000000">
+						<itemLabel/>
+					</plot>
+				</element>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+</jasperReport>
